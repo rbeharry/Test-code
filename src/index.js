@@ -1,25 +1,29 @@
 
-  // Select all dropdown buttons
-  document.querySelectorAll('.dropbtn').forEach(button => {
-    button.addEventListener('click', function (e) {
-      e.stopPropagation(); // prevent event from bubbling up
+document.addEventListener("DOMContentLoaded", function() {
+  const dropdownButtons = document.querySelectorAll(".dropbtn");
 
-      // Close other open dropdowns
-      document.querySelectorAll('.dropdown').forEach(dropdown => {
-        if (dropdown !== this.parentElement) {
-          dropdown.classList.remove('active');
+  dropdownButtons.forEach(button => {
+    button.addEventListener("click", function(e) {
+      e.stopPropagation();
+
+      // Close all dropdowns first
+      document.querySelectorAll(".dropdown-content").forEach(content => {
+        if (content !== this.nextElementSibling) {
+          content.style.display = "none";
         }
       });
 
-      // Toggle this dropdown
-      this.parentElement.classList.toggle('active');
+      // Toggle the clicked dropdown
+      const content = this.nextElementSibling;
+      content.style.display = content.style.display === "block" ? "none" : "block";
     });
   });
 
-  // Close dropdown if you click anywhere outside
-  document.addEventListener('click', () => {
-    document.querySelectorAll('.dropdown').forEach(dropdown => {
-      dropdown.classList.remove('active');
+  // Close dropdowns when clicking outside
+  document.addEventListener("click", function() {
+    document.querySelectorAll(".dropdown-content").forEach(content => {
+      content.style.display = "none";
     });
   });
+});
 
