@@ -4,10 +4,27 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+h1{
+    margin: 10px;
+}
+p {
+    margin: 10px;
+}
+
+h2{
+    margin: 10px;
+   
+}
+
+h3 {
+    margin: 10px;
+}
+
 a {
     color: white;
     text-decoration: none;
 }
+
 
 
 
@@ -17,14 +34,40 @@ a {
     font-style: italic;
 }
 
+
 .phone {
     font-size: 20px;       /* default font size */
     font-weight: bold;
     float: right;          /* aligns to right on larger screens */
     color: white;
-    margin: 0;             /* optional, remove default spacing */
+    margin: 0; 
+                /* optional, remove default spacing */
 }
 
+.phone a {
+    color: white;           /* match your text color */
+    text-decoration: none;  /* remove underline */
+}
+
+.phone a:hover {
+    text-decoration: underline; /* optional hover effect */
+}
+
+.phone-bottom {
+          /* default font size */
+    color: white;
+    margin: 0;            /* optional, remove default spacing */
+    text-align: left;    /* aligns to right on larger screens */
+}
+
+.phone-bottom a {
+    color: white;          
+    text-decoration: none; 
+}
+
+.phone-bottom a:hover {
+    text-decoration: underline; 
+}
 /* Medium screens (tablets) */
 @media (max-width: 768px) {
     .phone {
@@ -56,8 +99,9 @@ html {
 }
 
 
+
  .header {
-  position: sticky;     /* Make it fixed at the top */
+      /* Make it fixed at the top */
   top: 0;               /* Stick to the very top */
   left: 0;              /* Align to the left edge */
   width: 100%;          /* Full width of the viewport */
@@ -88,8 +132,9 @@ ul li a {
 }
 
 ul li a:hover {
-  background-color: #111111;
+  background-color: #938d8d;
 }
+
 
 /* Navbar container */
 .navbar {
@@ -111,10 +156,11 @@ ul li a:hover {
 /* The dropdown container */
 .dropdown {
   float: right;
-  overflow: hidden;
+    overflow: hidden; 
 }
 
 /* Dropdown button */
+
 
 .dropdown .dropbtn {
   display: block;       /* aligns with other links */
@@ -124,10 +170,10 @@ ul li a:hover {
   font-size: 16px;
   border: none;
   outline: none;
-  color: white; 
   font-family: inherit; /* Important for vertical align on mobile phones */
   margin: 0; /* Important for vertical align on mobile phones */
 }
+
 
 /* Add a red background color to navbar links on hover */
 .navbar a:hover, .dropdown:hover .dropbtn {
@@ -142,12 +188,14 @@ ul li a:hover {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  max-height: 300px;           /* set a max height */
+    overflow-y: auto;
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
   float: none;
-  color: black;
+  color: rgb(248, 243, 243);
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -156,7 +204,7 @@ ul li a:hover {
 
 /* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: red;
 }
 
 /* Show the dropdown menu on hover */
@@ -169,6 +217,7 @@ ul li a:hover {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
   gap: 10px;
 }
+
 
 
 .grid {
@@ -189,7 +238,7 @@ ul li a:hover {
 
    .projects {
   border-radius: 15px;
-  width: 300px;
+  width: 200px;
 }
 
 .grid-container {
@@ -364,6 +413,7 @@ footer {
 }
 
 
+
 .connect-section {
   text-align: left;
   margin-top: 20px;
@@ -435,6 +485,7 @@ footer {
 }
 
 
+
 #gear{
   animation: spin 2s linear infinite; /* Adjust duration as needed */
 }
@@ -449,4 +500,41 @@ footer {
 }
    
 
+/* Base dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #2f3b45;
+  min-width: 200px;
+  z-index: 1;
+}
 
+/* Hover for desktop */
+@media screen and (min-width: 769px) {
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+}
+
+.contact-info {
+    margin: 10px;            /* Remove default spacing */
+    font-size: 14px;      /* Adjust size if needed */
+    color: white;         /* Match text color */
+}
+
+.contact-info a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+#happy-family {
+    display: block;           /* makes the image a block element */
+    margin: 0 auto;           /* centers it horizontally */
+    width: 100%;              /* keeps your full width */
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
